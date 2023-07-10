@@ -10,7 +10,37 @@ Grandes Telas: acima de 1200px
 */
 
 @media print {
-    
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    body{
+        background-image: url(../imagens/back-print.jpg);
+    }
+    main{
+        border: 2px solid black;
+    }
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
+    main::after{
+        content: 'Esta impressão foi feita atraves do site curso em video.com';
+    }
+    img#phone{
+        display: none;
+    }
+    img#tablet{
+        display: none;
+    }
+    img#print{
+        display: block;
+    }
+    img#pc{
+        display: none;
+    }
+    img#tv{
+        display: none;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 992px){
     body{
@@ -70,6 +100,9 @@ Grandes Telas: acima de 1200px
         }
         img#tv{
             display: block;
+        }
+        main{
+            width: 700px;
         }
     
 }
